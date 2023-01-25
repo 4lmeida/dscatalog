@@ -40,8 +40,6 @@ public class ProductRepositoryTests {
     @Test
     public void findByIdShouldReturnProductNullWhenIdNotExist() {
 
-        Product product  = Factory.createProduct();
-
         Optional<Product> obj = repository.findById(countTotalId + 1);
 
         Assertions.assertTrue(obj.isEmpty());
