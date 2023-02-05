@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @Controller
@@ -22,7 +23,7 @@ public class UserResource {
     private UserService service;
 
     @PostMapping
-    public ResponseEntity<UserDTO> insert(@RequestBody UserInsertDTO dto)  {
+    public ResponseEntity<UserDTO> insert(@Valid @RequestBody UserInsertDTO dto)  {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(dto.getId()).toUri();
         UserDTO userDTO = service.insert(dto);
@@ -42,7 +43,7 @@ public class UserResource {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<UserDTO> update(@PathVariable Long id, @RequestBody UserDTO dto) {
+    public ResponseEntity<UserDTO> update(@PathVariable Long id, @Valid @RequestBody UserDTO dto) {
         dto = service.update(id, dto);
         return  ResponseEntity.ok().body(dto);
     }
