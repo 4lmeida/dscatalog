@@ -3,7 +3,7 @@ package com.devsuperior.dscatalog.resources.exceptions;
 import java.io.Serializable;
 import java.time.Instant;
 
-public class StandarError implements Serializable {
+public class StandardError implements Serializable {
 
     private Instant timestamp;
     private Integer status;
@@ -11,7 +11,7 @@ public class StandarError implements Serializable {
     private String message;
     private String path;
 
-    public StandarError() {
+    public StandardError() {
     }
 
     public Instant getTimestamp() {
