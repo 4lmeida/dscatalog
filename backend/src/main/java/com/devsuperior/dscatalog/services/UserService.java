@@ -11,6 +11,7 @@ import com.devsuperior.dscatalog.repositories.UserRepository;
 import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -29,7 +30,7 @@ import java.util.Optional;
 public class UserService implements UserDetailsService {
 
     @Autowired
-    private Logger logger;
+    private static Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
@@ -107,9 +108,11 @@ public class UserService implements UserDetailsService {
 
         User user =  userRepository.findByEmail(username);
         if(user == null) {
-            throw new UsernameNotFoundException("Username not found");
+            logger.error("Email not found" + username);
+            throw new UsernameNotFoundException("Email not found");
         }
 
+        logger.info("Email found" + username);
         return user;
     }
 }
