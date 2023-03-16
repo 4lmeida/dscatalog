@@ -23,7 +23,7 @@ public class ProductDTO implements Serializable {
     @Positive(message = "Valor deve ser positivo")
     private Double price;
     private String imgUrl;
-    @PastOrPresent(message = "Data do protudo não pode ser futura")
+    @PastOrPresent(message = "Data do produto não pode ser futura")
     private Instant date;
 
     private List<CategoryDTO> categories = new ArrayList<>();
