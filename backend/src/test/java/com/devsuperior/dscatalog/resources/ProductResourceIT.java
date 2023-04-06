@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class ProductResourceIT {
+class ProductResourceIT {
 
     @Autowired
     private MockMvc mockMvc;
@@ -50,7 +50,7 @@ public class ProductResourceIT {
     }
 
     @Test
-    public void findAllShouldReturnPagedSortedWhenSortByName() throws Exception {
+    void findAllShouldReturnPagedSortedWhenSortByName() throws Exception {
 
         ResultActions result = mockMvc.perform(
                 MockMvcRequestBuilders.get("/products?page=0&size=12&sort=name,asc")
@@ -66,7 +66,7 @@ public class ProductResourceIT {
     }
 
     @Test
-    public void updateShouldReturnProductDTOWhenIdExists() throws Exception {
+    void updateShouldReturnProductDTOWhenIdExists() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -89,7 +89,7 @@ public class ProductResourceIT {
     }
 
     @Test
-    public void updateShouldReturnResourceNotFoundExceptionWhenIdDoesNotExist() throws Exception {
+    void updateShouldReturnResourceNotFoundExceptionWhenIdDoesNotExist() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 

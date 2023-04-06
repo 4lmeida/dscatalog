@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ProductResourceTests {
+class ProductResourceTests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -80,7 +80,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void insertShouldReturnCreatedAndProductDTO() throws Exception {
+    void insertShouldReturnCreatedAndProductDTO() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -99,7 +99,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void deleteShouldReturnNoContentWhenIdExists() throws Exception {
+    void deleteShouldReturnNoContentWhenIdExists() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -111,7 +111,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void deleteShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
+    void deleteShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -123,7 +123,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void deleteShouldReturnBadRequestWhenDependentId() throws Exception {
+    void deleteShouldReturnBadRequestWhenDependentId() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -135,9 +135,8 @@ public class ProductResourceTests {
     }
 
 
-
     @Test
-    public void updateShouldReturnProductDTOWhenIdExists() throws Exception {
+    void updateShouldReturnProductDTOWhenIdExists() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -156,7 +155,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void updateShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
+    void updateShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 
         String accessToken = tokenUtil.obtainAccessToken(mockMvc, username, password);
 
@@ -172,7 +171,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void findAllPagedShouldReturnPageProductDTO() throws Exception {
+    void findAllPagedShouldReturnPageProductDTO() throws Exception {
         ResultActions result = mockMvc.perform(get("/products")
                 .accept(MediaType.APPLICATION_JSON));
 
@@ -181,7 +180,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void findByIdShouldReturnProductDTOWhenIdExists() throws Exception {
+    void findByIdShouldReturnProductDTOWhenIdExists() throws Exception {
 
         ResultActions result = mockMvc.perform(get("/products/{id}", existingId)
                 .accept(MediaType.APPLICATION_JSON));
@@ -193,7 +192,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void findByIdShouldReturnNotFoundWhenIdDoesNotExists() throws Exception  {
+    void findByIdShouldReturnNotFoundWhenIdDoesNotExists() throws Exception  {
 
         ResultActions  result = mockMvc.perform(get("/products/{id}", nonExistingId)
                 .accept(MediaType.APPLICATION_JSON));

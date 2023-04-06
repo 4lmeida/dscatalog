@@ -4,9 +4,12 @@ import com.devsuperior.dscatalog.entities.Category;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+
 public class CategoryDTO implements Serializable {
 
     private Long id;
+    @NotBlank(message = "Prencher campo")
     private String name;
 
     public CategoryDTO() {
