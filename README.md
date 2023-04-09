@@ -47,7 +47,7 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 :heavy_check_mark: Validação.
 
-# Layout e Deploy da Aplicação :mag_righ:
+# Layout e Deploy da Aplicação 🔎
 
 > Link do deploy da aplicação. Railway: https://dscatalog.up.railway.app 
 
