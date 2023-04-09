@@ -18,7 +18,7 @@
 
 :small_blue_diamond: [Modelo Conceitual](#Modelo-conceitual-page_with_curl)
 
-:small_blue_diamond: [Layout](#Layout-mag_right)
+:small_blue_diamond: [Layout e deploy](#Layout-e-deploy-da-aplicação-mag_right)
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
@@ -47,7 +47,9 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 :heavy_check_mark: Validação.
 
-# Layout :mag_right:
+# Layout e Deploy da Aplicação :mag_righ:
+
+> Link do deploy da aplicação. Railway: https://dscatalog.up.railway.app 
 
 - Login:
 
@@ -129,7 +131,12 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 # Como rodar a aplicação :arrow_forward:
 
-Pré-requisitos: Java 17
+Pré-requisitos: 
+
+:warning: [Java](https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR)
+
+:warning: [Maven](https://maven.apache.org/)
+
 ### Acessar o terminal / CLI
 ```bash
 # clonar repositório
