@@ -111,8 +111,8 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 | first_name | last_name |  email   | password |
 |------|-----------------|----------|----------|
-| Ana  | Green | alex@gmail.com | $2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
-| Bob  | brown | maria@gmail.com |$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
+| Alex  | Brown | alex@gmail.com | $2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
+| Maria  | Green | maria@gmail.com |$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
 
 ### Categoria:
 
