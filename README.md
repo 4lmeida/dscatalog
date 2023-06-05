@@ -3,6 +3,7 @@
   <img src="https://img.shields.io/static/v1?label=spring&message=framework&color=blue&style=for-the-badge&logo=SPRING"/>
   <img src="https://img.shields.io/static/v1?label=Postman&message=API management&color=blue&style=for-the-badge&logo=postman"/>
   <img src="https://img.shields.io/static/v1?label=Apache&message=Dependency manager&color=blue&style=for-the-badge&logo=apache"/>
+  <img src="https://img.shields.io/static/v1?label=Railway&message=Deploy&color=blue&style=for-the-badge&logo=railway"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=FASE&message=BACKEND&color=RED&style=for-the-badge"/>
 </p>  
@@ -17,7 +18,7 @@
 
 :small_blue_diamond: [Modelo Conceitual](#Modelo-conceitual-page_with_curl)
 
-:small_blue_diamond: [Layout](#Layout-mag_right)
+:small_blue_diamond: [Layout e deploy](#Layout-e-deploy-da-aplicação-mag_right)
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
@@ -46,7 +47,9 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 :heavy_check_mark: Validação.
 
-# Layout :mag_right:
+# Layout e Deploy da Aplicação :mag:
+
+> Link do deploy da aplicação. Railway: https://dscatalog.up.railway.app 
 
 - Login:
 
@@ -108,8 +111,8 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 | first_name | last_name |  email   | password |
 |------|-----------------|----------|----------|
-| Ana  | ana@hotmail.com | alex@gmail.com | $2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
-| Bob  | bob@hotmail.com | maria@gmail.com |$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
+| Alex  | Brown | alex@gmail.com | $2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
+| Maria  | Green | maria@gmail.com |$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG
 
 ### Categoria:
 
@@ -128,7 +131,12 @@ usuários administradores(ADMIN) podem inserir, listar, atualizar, deletar e fil
 
 # Como rodar a aplicação :arrow_forward:
 
-Pré-requisitos: Java 17
+Pré-requisitos: 
+
+:warning: [Java](https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR)
+
+:warning: [Maven](https://maven.apache.org/)
+
 ### Acessar o terminal / CLI
 ```bash
 # clonar repositório
